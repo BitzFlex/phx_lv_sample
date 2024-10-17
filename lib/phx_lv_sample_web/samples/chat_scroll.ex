@@ -2,7 +2,9 @@ defmodule PhxLvSampleWeb.Samples.ChatScroll do
   use PhxLvSampleWeb, :live_view
 
   @moduledoc """
-    temporary_assigns을 이용 예제
+    temporary_assigns을 이용 예제 ,
+
+    phx-hook 사용
   """
 
 
@@ -13,7 +15,7 @@ defmodule PhxLvSampleWeb.Samples.ChatScroll do
       <%!-- <div class="h-32 bg-blue-50">abc</div> --%>
 
       <div class="h-32 bg-blue-50 border border-lime-400 overflow-hidden overflow-y-auto"
-           id="chat-messages"  phx-update="append">
+           id="chat-messages"  phx-update="append" phx-hook="ScrollToBotton">
         <%= for message <- @messages do %>
           <p id={message.id}>
             <%= message.text %>
