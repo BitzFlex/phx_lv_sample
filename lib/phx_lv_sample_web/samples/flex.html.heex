@@ -1,0 +1,284 @@
+<div class="p-2">
+  <p class="text-2xl">
+    Flex Study Sample
+  </p>
+  <br>
+
+  <div class="font-bold"> 원래 Block element는 width를 주지 않으면 width full 이고 wrap이 된다. </div>
+  <p class=" bg-blue-200 wrap">
+    로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 하지만 그 이상의 의미를 담지는 않는다. 문서에서 텍스트가 보이면 사람들은 전체적인 프레젠테이션보다는 텍스트에 담긴 뜻에 집중하는 경향이 있어서 출판사들은 서체나 디자인을 보일 때는 프레젠테이션 자체에 초점을 맞추기 위해 로렘 입숨을 사용한다.
+  </p>
+  <br>
+  <div class="font-bold"> width를 주게 되면 그 안애서 wrap 이된다.  </div>
+  <div class="w-96 bg-blue-200">
+    로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 하지만 그 이상의 의미를 담지는 않는다. 문서에서 텍스트가 보이면 사람들은 전체적인 프레젠테이션보다는 텍스트에 담긴 뜻에 집중하는 경향이 있어서 출판사들은 서체나 디자인을 보일 때는 프레젠테이션 자체에 초점을 맞추기 위해 로렘 입숨을 사용한다.
+  </div>
+
+  <br>
+  <div class="font-bold"> width 와 mx-auto를 주면 가운대 정렬이 된다. 참고로, tailwind의 container는 break point에 따른 size 지정이다. </div>
+  <div class="w-96 mx-auto">
+    로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 하지만 그 이상의 의미를 담지는 않는다. 문서에서 텍스트가 보이면 사람들은 전체적인 프레젠테이션보다는 텍스트에 담긴 뜻에 집중하는 경향이 있어서 출판사들은 서체나 디자인을 보일 때는 프레젠테이션 자체에 초점을 맞추기 위해 로렘 입숨을 사용한다.
+  </div>
+
+  <hr>
+  <br>
+
+  <p class="font-bold">Flex 기본 사항은 item이 stretch 되지 않는다. shrink는 되며, item들의 높이를 모두 같게 한다. shrink가 기본이므로 item width를 조정한다. </p>
+  <p class="font-bold">container의 width는 항상 상위 container의 width 이다. </p>
+  <p class="font-bold">item들의 높이를 같게 한다는 것은 align-stetch 가 기본임을 의미한다.  </p>
+  <div class="flex flow-row bg-yellow-50 ">
+    <div class="bg-blue-200 border-2 rounded-lg">
+      가나다라
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      abcdefg 가나다라 마바사아 자차 
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+  <br>
+  <br>
+  <p class="font-bold"><strong>basis</strong>넓이에 대한 조정 : item에 대해 적용한다. </p>
+  <div class="flex flow-row bg-yellow-50 ">
+    <div class="bg-blue-200 border-2 rounded-lg basis-auto">
+      가나다라
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg basis-auto">
+      abcdefg 가나다라 마바사아 자차 
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg basis-1/2">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+  <div class="flex flow-row bg-yellow-50 ">
+    <div class="bg-blue-200 border-2 rounded-lg basis-1/4">
+      가나다라
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg basis-1/4">
+      abcdefg 가나다라 마바사아 자차 
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg basis-1/4">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+  <div class="flex flow-row bg-yellow-50 ">
+    <div class="bg-blue-200 border-2 rounded-lg basis-0">
+      가나다라
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg basis-1/4">
+      abcdefg 가나다라 마바사아 자차 
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg basis-1/4">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <br>
+  <p> <strong>grow 되는 항목이 없어서</strong> container를 채우지 못할경우 justify 가 동작한다. justify-center 적용한 경우  </p>
+  <div class="flex flow-row bg-yellow-50 justify-center">
+    <div class="bg-blue-200 border-2 rounded-lg">
+      abc
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      abcdefg
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+  <br>
+  <p> justify-evenly </p>
+  <div class="flex flow-row bg-yellow-50 justify-evenly">
+    <div class="bg-blue-200 border-2 rounded-lg">
+      abc
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      abcdefg
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+  <br>
+
+
+
+
+  <p class="font-bold">크기를 고정하고 싶으면 flex-none 또는 grow-0, 늘릴수 있도록 하려면 grow 를 <strong>item에 적용</strong> </p>
+  <p class="font-bold">shrink-0은 줄어들기를 방지 shrink는 줄어들수 있도록  <strong>item에 적용</strong> </p>
+  <p class="font-bold">item의 shrink-0 은 결국 container의 크기를 고정하는 것이 되므로, window에 scroll이 생긴다.  </p>
+
+  <div class="flex flow-row bg-yellow-50 ">
+    <div class="bg-blue-200 border-2 rounded-lg flex-none">
+      abc
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg grow">
+      abcdefg
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg grow-0 shrink-0 ">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg flex-none">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+  <p><strong>nowrap은 </strong> container의 크기를 item들을 포함하는 크기로 고정하는 것과 같다.   </p>
+  <div class="flex flow-row bg-yellow-50 flex-nowrap">
+    <div class="bg-blue-200 border-2 rounded-lg flex-none">
+      abc
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg grow">
+      abcdefg
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg grow-0 shrink-0 ">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg flex-none">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+
+  <br>
+  <p><strong>wrap은 </strong> container의 크기를 window에 맞추고 shrink 안되는 항목을 아래로 내린다.  </p>
+  <div class="flex flow-row bg-yellow-50 flex-wrap">
+    <div class="bg-blue-200 border-2 rounded-lg flex-none">
+      abc
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg grow">
+      abcdefg
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg grow-0 shrink-0 ">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg flex-none">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+
+  <br>
+  <p><strong>align은</strong>cross-axis에 대한 설정이다. container에 대해 지정 기본은 align-stretch (tailwind에서는 items-stretch) 이다.   </p>
+  <p>아래는 items-start를 적용한 경우 (	align-items: flex-start;)   </p>
+  <div class="flex flow-row bg-yellow-50 items-start">
+    <div class="bg-blue-200 border-2 rounded-lg text-4xl">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      abcdefg
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg text-2xl">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+  <p>container align 설정과 다르게 한 item만 align을 바꾸고 싶을때는 self-center (	align-self: center; )</p>
+  <div class="flex flow-row bg-yellow-50 items-start">
+    <div class="bg-blue-200 border-2 rounded-lg text-4xl">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg self-end">
+      self-end 적용
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg self-center">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 self-center 적용
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg text-2xl">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+  <br>
+  <p>gap-x 로 항목들 간의 gap을 지정 </p>
+  <div class="flex flow-row bg-yellow-50 items-start gap-9">
+    <div class="bg-blue-200 border-2 rounded-lg text-4xl">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg self-end">
+      self-end 적용
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg self-center">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 self-center 적용
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg text-2xl">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+
+
+
+
+
+  <p class="text-2xl pt-5 font-bold">
+    Flex Column 에 대한 시험 
+  </p>
+
+  <div class="flex flex-col bg-yellow-50 ">
+    <div class="bg-blue-200 border-2 rounded-lg">
+      가나다라
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      abcdefg 가나다라 마바사아 자차 
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도
+    </div>
+  </div>
+
+  <br>
+  <div class="flex flex-col bg-yellow-50 ">
+    <div class="bg-blue-200 border-2 rounded-lg">
+      가나다라
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      abcdefg 가나다라 마바사아 자차 
+    </div>
+    <div class="bg-blue-200 border-2 rounded-lg">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 
+    </div>
+  </div>
+  <br>
+
+  <div class="bg-blue-200 border-2 rounded-lg w-48 h-48 flex items-center justify-center">
+    <span>Text centered</span>
+  </div>
+
+  <div class="flex items-center bg-blue-200 border-2 rounded-lg w-48 h-48 text-center ">
+    가나다라
+  </div>
+
+  <div class="flex items-center bg-blue-200 border-2 rounded-lg min-w-48 h-48 text-center ">
+    가나다라
+  </div>
+
+  
+
+  <br>
+  <div class="flex flex-col bg-yellow-50">
+    <div class="basis-1/12 bg-blue-200 border-2 rounded-lg text-center">
+      가나다라
+    </div>
+    <div class="basis-4/12 bg-blue-200 border-2 rounded-lg">
+      abcdefg 가나다라 마바사아 자차 
+    </div>
+    <div class="basis-4/12 bg-blue-200 border-2 rounded-lg">
+      로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 로렘 입숨은 전통 라틴어와 닮은 점 때문에 종종 호기심을 유발하기도 
+    </div>
+  </div>
+
+</div>
