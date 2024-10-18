@@ -48,7 +48,7 @@ config :phx_lv_sample, PhxLvSampleWeb.Endpoint,
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/phx_lv_sample_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/phx_lv_sample_web/(controllers|live|components|samples)/.*(ex|heex)$"
     ]
   ]
 
