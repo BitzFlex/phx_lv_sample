@@ -22,6 +22,7 @@ defmodule PhxLvSampleWeb.Router do
     live "/chat_scroll" , Samples.ChatScroll
     live "/blink" , Samples.Blink
     live "/flex", Samples.Flex
+    live "/push_event", Samples.PushEvent
   end
 
   # Other scopes may use custom stacks.

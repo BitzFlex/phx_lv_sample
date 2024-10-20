@@ -22,6 +22,43 @@ defmodule PhxLvSampleWeb.Samples.ChatScroll do
           </p>
         <% end %>
       </div>
+
+
+      <pre>
+        <code>
+
+======   hook.js
+
+let Hooks = {};
+
+Hooks.ScrollToBotton = {
+  mounted() {
+    this.scrollToBottom();
+  },
+  updated() {
+    this.scrollToBottom();
+  },
+  scrollToBottom() {
+    let el = this.el;
+    el.scrollTop = el.scrollHeight;
+  }
+};
+
+export default Hooks;
+
+
+======   app.js
+let liveSocket = new LiveSocket("/live", Socket, {
+  <span class="font-bold">hooks: Hooks,</span>
+  longPollFallbackMs: 2500,
+
+
+===== heex
+div class="h-32 bg-blue-50 border border-lime-400 overflow-hidden overflow-y-auto"
+           id="chat-messages"  phx-update="append" <span class="font-bold"> phx-hook="ScrollToBotton" </span>
+
+        </code>
+      </pre>
     """
   end
 

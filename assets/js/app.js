@@ -34,8 +34,12 @@ let liveSocket = new LiveSocket("/live", Socket, {
 
 // Show progress bar on live navigation and form submits
 topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
-window.addEventListener("phx:page-loading-start", _info => topbar.show(300))
+window.addEventListener("phx:page-loading-start", info => {topbar.show(300); console.log(["phx:page-loading-star info ", info])})
 window.addEventListener("phx:page-loading-stop", _info => topbar.hide())
+window.addEventListener("phx:navigate", _info => {topbar.show(300); console.log(["phx:navigate info ", info])})
+window.addEventListener("phx:event_by_click", info => {console.log(["event from server phx:event_by_click info ", info , info.detail])})
+
+
 
 // connect if there are any LiveViews on the page
 liveSocket.connect()
@@ -45,4 +49,5 @@ liveSocket.connect()
 // >> liveSocket.enableLatencySim(1000)  // enabled for duration of browser session
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
+
 
